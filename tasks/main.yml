@@ -1,0 +1,20 @@
+---
+
+- name: Add Heimdall repository
+  kubernetes.core.helm_repository:
+    name: '{{ heimdall_repo_name }}'
+    repo_url: '{{ heimdall_repo_url }}'
+
+- name: Deploy Heimdall Helm chart
+  kubernetes.core.helm:
+    name: heimdall
+    chart_ref: k8s-at-home/heimdall
+    chart_version: '{{ heimdall_repo_version }}'
+    release_namespace: '{{ heimdall_namespace }}'
+    create_namespace: true
+    update_repo_cache: true
+    values: "{{ lookup('template', 'chart-values.yaml.j2') | from_yaml }}"
+
+- name: Create Heimdall ingress route
+  kubernetes.core.k8s:
+    template: ingressroute.yaml.j2

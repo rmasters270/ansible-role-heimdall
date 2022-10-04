@@ -1,0 +1,18 @@
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: heimdall-web
+  namespace: {{ heimdall_namespace }}
+
+spec:
+  entryPoints:
+    - websecure
+
+  routes:
+    - match: Host(`{{ heimdall_hostname }}`)
+      kind: Rule
+      services:
+        - name: heimdall
+          port: 80
+  tls: {}
