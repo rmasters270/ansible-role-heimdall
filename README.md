@@ -27,7 +27,6 @@ The host must have the Helm package manager installed.
 | heimdall_repo_url       | yes      | <https://k8s-at-home.com/charts/>  | Helm repository URL                         |
 | heimdall_repo_version   | yes      | 8.3.2                              | Helm chart version                          |
 | heimdall_hostname       | yes      | heimdall.{{ ansible_domain }}      | Heimdall hostname for Traefik ingressroute  |
-| heimdall_storage_class  | yes      | local-path                         | Heimdall configuration storageclass         |
 
 ## Dependencies
 
