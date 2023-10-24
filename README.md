@@ -1,6 +1,6 @@
-# Role Name
+# Heimdall
 
-A brief description of the role goes here.
+Install Heimdall on a Kubernetes cluster.
 
 [![Ansible Galaxy](https://img.shields.io/badge/ansible--galaxy-heimdall-blue.svg)](https://galaxy.ansible.com/rmasters270/heimdall)
 
