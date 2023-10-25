@@ -2,7 +2,7 @@
 
 Install Heimdall on a Kubernetes cluster.
 
-[![Ansible Galaxy](https://img.shields.io/badge/ansible--galaxy-heimdall-blue.svg)](https://galaxy.ansible.com/rmasters270/heimdall)
+[![Ansible Galaxy](https://img.shields.io/badge/ansible--galaxy-heimdall-blue.svg)](https://galaxy.ansible.com/ui/standalone/roles/rmasters270//heimdall)
 
 ## Requirements
 
@@ -20,13 +20,13 @@ The host must have the Helm package manager installed.
 
 ## Role Variables
 
-| Variable                | Required | Default                            | Comments                                    |
-|-------------------------|----------|------------------------------------|---------------------------------------------|
-| heimdall_namespace      | yes      | heimdall                           | Kubernetes namespace                        |
-| heimdall_repo_name      | yes      | k8s-at-home                        | Helm repository name                        |
-| heimdall_repo_url       | yes      | <https://k8s-at-home.com/charts/>  | Helm repository URL                         |
-| heimdall_repo_version   | yes      | 8.3.2                              | Helm chart version                          |
-| heimdall_hostname       | yes      | heimdall.{{ ansible_domain }}      | Heimdall hostname for Traefik ingressroute  |
+| Variable              | Required | Default                           | Comments                                   |
+| --------------------- | -------- | --------------------------------- | ------------------------------------------ |
+| heimdall_namespace    | yes      | heimdall                          | Kubernetes namespace                       |
+| heimdall_repo_name    | yes      | k8s-at-home                       | Helm repository name                       |
+| heimdall_repo_url     | yes      | <https://k8s-at-home.com/charts/> | Helm repository URL                        |
+| heimdall_repo_version | yes      | 8.3.2                             | Helm chart version                         |
+| heimdall_hostname     | yes      | heimdall.{{ ansible_domain }}     | Heimdall hostname for Traefik ingressroute |
 
 ## Dependencies
 
