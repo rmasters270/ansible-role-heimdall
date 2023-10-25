@@ -3,5 +3,5 @@
 heimdall_namespace: heimdall
 heimdall_repo_name: k8s-at-home
 heimdall_repo_url: https://k8s-at-home.com/charts/
-heimdall_repo_version: 8.3.2
+heimdall_repo_version: 8.4.2
 heimdall_hostname: heimdall.{{ ansible_domain }}
